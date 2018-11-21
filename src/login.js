@@ -1,7 +1,6 @@
 require('./current_file').file(__filename);
 
 /*
-* [GR:0007:alpha]
 * Simple SQLi
 */
 
