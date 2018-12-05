@@ -1,4 +1,4 @@
-# A repository with the vulnerabilities we should find for JavaScript
+# A repository with the JavaScript vulnerabilities
 
 [![GuardRails badge](https://badges.production.guardrails.io/guardrailsio/guardrails-test-javascript.svg?token=1ef3cdea1e6981728d341a4ff3034b28ae88ea2f3231ff81019864c423763108&ts=1531752935595)](https://www.guardrails.io/)
 
