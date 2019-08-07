@@ -1,0 +1,4 @@
+report:
+  pullRequest:
+    findings: "onAllFiles"
+    comment: true
