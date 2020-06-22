@@ -1,7 +1,5 @@
 require('./current_file').file(__filename);
 
-var query = 'SELECT * from user where id=' + req.body.id + ';';
-
 sequelize
   .query("SELECT * FROM user WHERE id = :id ", {
     raw: true,
