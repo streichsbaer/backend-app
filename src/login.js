@@ -1,9 +1,9 @@
 var db = require('../models');
 
 // module.exports.userSearch = function (req, res) {
-//   var query = "SELECT * from user where id=2";
-// 	// var authquery = "SELECT name,id FROM Users WHERE login='" + req.body.login + "'";
-// 	db.sequelize.query(authquery, {
+//   var sqlquery = "SELECT * from user where id=2";
+// 	// var sqlquery = "SELECT name,id FROM Users WHERE login='" + req.body.login + "'";
+// 	db.sequelize.query(sqlquery, {
 // 		model: db.User
 // 	}).then(user => {
 // 		if (user.length) {
