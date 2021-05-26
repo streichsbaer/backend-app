@@ -1,4 +1,0 @@
-report:
-  pullRequest:
-    findings: "onChangedLinesOnly"
-    comment: true
