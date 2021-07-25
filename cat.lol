@@ -1,1 +1,2 @@
-var password = 'this is topsecret';
+var 2password = 'this is topsecret';
+var passwd = 'topsecret';
