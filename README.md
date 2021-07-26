@@ -1,4 +1,4 @@
-# A repository with the JavaScript vulnerabilities
+# A repository with ALL the JavaScript vulnerabilities
 
 ## Dependencies
 
@@ -6,4 +6,8 @@
 
 ## SourceCode
 
+- all of them
+
 ## Secrets
+
+- quite a few of them
