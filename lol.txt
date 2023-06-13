@@ -1,8 +1,0 @@
-def do_something():
-    infura = "https://mainnet.infura.io/v3/99dc6a28ef704167ac48c826ef01e694"
-
-
-if __name__ == "__main__":
-   do_something()
-
-https://mainnet.infura.io/v3/99dc6a28ef704167ac48c826ef01e694
