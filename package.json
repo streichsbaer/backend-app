@@ -13,6 +13,6 @@
   },
   "scripts": {
     "test": "ecbo hi && exit 1",
-    "postinstall": "ecno Running malicious code"
+    "postinstall": "echo 'Running bad code'"
   }
 }
