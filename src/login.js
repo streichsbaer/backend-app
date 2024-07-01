@@ -1,9 +1,11 @@
 var db = require('../models');
 
 module.exports.userSearch = function (req, res) {
-	var sql = "SELECT name,id FROM Users WHERE login='" + req.body.login + "'";
+	var sql = "SELECT name,id FROM Users WHERE login=:login";
 	db.sequelize.query(sql, {
-		model: db.User
+		model: db.User,
+		raw: true,
+  		replacements: { login: req.body.login }
 	}).then(user => {
 		if (user.length) {
 			var output = {
