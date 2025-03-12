@@ -1,0 +1,65 @@
+!/usr/bin/python3
+import logging
+import json
+import multiprocessing
+import sys
+import time
+import threading
+import requests
+
+# create logging
+logging.basicConfig(format="%(asctime)s: [%(levelname)s] [%(funcName)s] [%(lineno)d] %(message)s",
+                    handlers=[logging.FileHandler("./app.log"), logging.StreamHandler()],
+                    level=logging.INFO)
+
+
+json_file = open("{}".format(input_file))
+payload = json.load(json_file)
+logging.info("Payload recieved- %s", payload)
+json_file.close()
+
+LAB_ARTIFACTORY_URL = "Hidden"
+PROD_ARTIFACTORY_URL = "Hidden"
+
+LAB_ARTIF_CRED = ("xxxx312331", "abc123") # Hard coded secrets
+XXX_ARTIF_CRED = "secretasd" # Hard coded secrets
+PROD_ARTIF_CRED = ("j2hlasdas", "abc124") # Hard coded secrets
+
+# Get the ENV values for call back URL and credentials
+LAB_CALL_BACK_URL = "Hidden"
+PROD_CALL_BACK_URL = "Hidden"
+CALLBACK_USERNAME = os.getenv["CALLBACK_USERNAME"]
+CALLBACK_PASSWORD = os.getenv["CALLBACK_PASSWORD"]
+
+LAB_AUTH_HEADER = 'Basic fffsfsdfsdf=' # Hard coded secrets
+PROD_AUTH_HEADER = 'Basic fsdfsdfsdfsf==' # Hard coded secrets
+CONTENT_TYPE_HEADER = 'application/json'
+LAB_API_KEY = 'dummy API Key' # Hard coded secrets
+PROD_API_KEY = 'dummy API Key2' # Hard coded secrets
+HTTP_POST_TIMEOUT = 5  # 5 Secs
+NUM_AUTH_RETRY = 2
+LAB_ISE_TEMPLATE_URL = 'Hidden'
+
+LAB_ISE_AUTHORIZATION = "dummy key" # Hard coded secrets
+LAB_ISE_API_KEY = "dummy keys" # Hard coded secrets
+
+PROD_ISE_AUTHORIZATION = "dummy key122" # Hard coded secrets
+PROD_ISE_API_KEY = "dummy keys345" # Hard coded secrets"
+
+LAB_LOCAL_DEVICE_AUTHORIZATION = "dummy keys6666" # Hard coded secrets
+LAB_LOCAL_DEVICE_API_KEY = "dummy key7777" # Hard coded secrets"
+
+PROD_LOCAL_DEVICE_AUTHORIZATION = "dummy keys8888" # Hard coded secrets
+PROD_LOCAL_DEVICE_API_KEY = "dummy key9999" # Hard coded secrets"
+
+USER_NAME = 'abc1' 
+PSWD = 'abc@123' # Hard coded secrets"
+
+LOCAL_LAB_DEVICE_ACCOUNT_URL = 'Hidden'
+LOCAL_PRODUCTION_DEVICE_ACCOUNT_URL = 'Hidden'
+
+GENERIC_API_USER_NAME = 'abc1' 
+GENERIC_API_PSWD = 'abc@123ccv' # Hard coded secrets
+
+LOCAL_OOB_USER_NAME = 'abc1'
+LOCAL_TOR_USER_NAME = 'abc@123e33' # Not a secret, but username
