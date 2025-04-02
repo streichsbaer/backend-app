@@ -13,7 +13,7 @@ module.exports.userSearch = function (req, res) {
 				}
 			}
 			res.render('app/usersearch', {
-				output: output
+				oxutput: output
 			})
 		} else {
 			req.flash('warning', 'User not found')
