@@ -24,7 +24,7 @@ module.exports.userSearch = function (req, res) {
 		}
 	}).catch(err => {
 		req.flash('danger', 'Internal Error')
-		res.render('app/usersearch', {
+		res.render('app/userxsearch', {
 			output: null
 		})
 	})
