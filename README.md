@@ -30,6 +30,21 @@ This repository contains intentional security vulnerabilities for testing and ed
 - **src/GR0005.js**: Deprecated Buffer method with noAssert parameter
 - **src/GR0006.js**: Deprecated `new Buffer()` constructor usage
 
+### 8. Path Traversal
+- **src/GR0010.js**: Directory traversal through unsanitized file path concatenation
+
+### 9. Prototype Pollution
+- **src/GR0011.js**: Object merge function vulnerable to prototype pollution attacks
+
+### 10. LDAP Injection
+- **src/GR0012.js**: LDAP query filter vulnerable to injection attacks
+
+### 11. NoSQL Injection
+- **src/GR0013.js**: MongoDB query vulnerable to NoSQL injection through object injection
+
+### 12. Insecure Deserialization
+- **src/GR0014.js**: Unsafe deserialization of untrusted data leading to RCE
+
 ## Dependencies
 
 - `hoek` version 5.0.0: [NSWG-367](https://github.com/nodejs/security-wg/blob/a3425e433e4b8e7c99c0d3244491b215b2554f55/vuln/npm/367.json)
@@ -47,3 +62,8 @@ This repository contains intentional security vulnerabilities for testing and ed
 | ReDoS | `src/GR0001.js`, `src/GR0002.js` |
 | Hardcoded Secrets | `secrets.js`, `src/GR0008.js` |
 | Unsafe Functions | `src/GR0005.js`, `src/GR0006.js` |
+| Path Traversal | `src/GR0010.js` |
+| Prototype Pollution | `src/GR0011.js` |
+| LDAP Injection | `src/GR0012.js` |
+| NoSQL Injection | `src/GR0013.js` |
+| Insecure Deserialization | `src/GR0014.js` |
