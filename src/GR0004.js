@@ -7,3 +7,6 @@ require('./current_file').file(__filename);
 
 var Handlebars = require('handlebars');
 Handlebars.SafeString("<button>I agree I</button>")
+
+// This should trigger an issue
+Handlebars.SafeString("<button>aaaa</button>")
