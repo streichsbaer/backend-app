@@ -14,5 +14,8 @@
   },
   "scripts": {
     "test": "ecbo hi && exit 1"
+  },
+  "overrides": {
+    "minimist": "0.2.4"
   }
 }
