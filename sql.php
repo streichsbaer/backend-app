@@ -6,4 +6,4 @@ $query = "SELECT id, name, inserted, size FROM products
 WHERE size = '$offset'";
 $result = odbc_exec($conn, $query);
 $user_query = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid' ORDER BY name LIMIT 20 OFFSET $offset;";
-$result = odbc_exec($connn, $user_query);
+$result = odbc_exec($conn, $user_query);
