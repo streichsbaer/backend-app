@@ -7,3 +7,5 @@ WHERE size = '$offset'";
 $result = odbc_exec($conn, $query);
 $query = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid';";
 $query = "UPDATE accounttable SET pwd='$pwd' WHERE uid='$uid';";
+$aqa = "UPDATE accounttable SET pwd='$pwd' WHERE uid='$uid' ORDER BY name LIMIT 20 OFFSET $offset;";
+$result = odbc_exec($conn, $aqa);
