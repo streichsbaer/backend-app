@@ -1,5 +1,5 @@
 <?php
-// Database credentials a
+// Database credentials
 $servername = "localhost";
 $username = "root";
 $password = "secret";
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// THE VULNERABILITY: Taking input directly from the URL query string
+// THE VULNERABILITY: Taking input directly from the URL query string!
 // Example: lookup.php?id=1
 $user_id = $_GET['id'];
 
