@@ -9,5 +9,3 @@ $result = odbc_exec($conn, $query);
 
 $abcdquery = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid' ORDER BY name LIMIT 20 OFFSET $offset;";
 $result = odbc_exec($conn, $abcdquery);
-$abcquery = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid' ORDER BY name LIMIT 20 OFFSET $offset;";
-$result = odbc_exec($conn, $abcquery);
