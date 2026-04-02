@@ -5,5 +5,5 @@ $result = pg_query($conn, $query);
 $query = "SELECT id, name, inserted, size FROM products
 WHERE size = '$offset'";
 $result = odbc_exec($conn, $query);
-$query = "UPDATE usertable SET pwd='$pwd' WHERE uid='$uid';";
-$query = "UPDATE accounttable SET pwd='$pwd' WHERE uid='$uid';";
+$query_new = "UPDATE accounttable SET pwd='$pwd' WHERE uid='$uid' LIMIT 20 OFFSET $offset;"; 
+$result = pg_query($conn, $query_new);
