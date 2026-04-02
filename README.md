@@ -5,7 +5,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 ## Vulnerability Summary
 
 ### 1. SQL Injection Vulnerabilities
-- **sql.php**: Multiple SQL injection examples using unsanitized `$_GET` parameters
+- **sql.php**: Multiple SQL injection examples using unsanitized `$_GxxxET` parameters
 - **src/login.js**: Commented SQL injection in login query using string concatenation
 
 ### 2. Code Injection
