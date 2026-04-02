@@ -1,3 +1,6 @@
+
+
+
 # A repository with ALL the JavaScript vulnerabilities
 
 This repository contains intentional security vulnerabilities for testing and educational purposes. **Do not use this code in production environments.**
@@ -70,3 +73,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 
 
 xxx
+
+
+
+zzz
