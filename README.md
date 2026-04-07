@@ -16,7 +16,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 
 ### 4. Cross-Site Scripting (XSS)
 - **src/GR0003.js**: Mustache template escape configuration issues
-- **src/GR0004.js**: Handlebars.SafeString bypassing HTML escaping
+- **src/GR0004.js**: Handlebars.SafeString bypassing HTML escapingssadasdasd
 
 ### 5. Regular Expression Denial of Service (ReDoS)
 - **src/GR0001.js**: Catastrophic backtracking regex `/(x+x+)+y/`
