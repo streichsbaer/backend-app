@@ -11,7 +11,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 ### 2. Code Injection
 - **src/GR0008.js**: Direct `eval()` execution on user input (`req.body.evil`)
 
-### 3. Command Injection
+### 3. Command Injectionxxxxx
 - **src/GR0009.js**: Unsafe use of `child_process.exec()` for system command execution
 
 ### 4. Cross-Site Scripting (XSS)
