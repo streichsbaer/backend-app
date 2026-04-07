@@ -4,7 +4,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 
 ## Vulnerability Summary
 
-### 1. SQL Injection Vulnerabilities
+### 1. SQL Injection Vulnerabilitiesasdsadsad
 - **sql.php**: Multiple SQL injection examples using unsanitized `$_GET` parameters
 - **src/login.js**: Commented SQL injection in login query using string concatenation
 
@@ -16,7 +16,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 
 ### 4. Cross-Site Scripting (XSS)
 - **src/GR0003.js**: Mustache template escape configuration issues
-- **src/GR0004.js**: Handlebars.SafeString bypassing HTML escapingssadasdasd
+- **src/GR0004.js**: Handlebars.SafeString bypassing HTML escapingssadasdasdsdafa
 
 ### 5. Regular Expression Denial of Service (ReDoS)
 - **src/GR0001.js**: Catastrophic backtracking regex `/(x+x+)+y/`
