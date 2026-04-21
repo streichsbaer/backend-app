@@ -57,7 +57,7 @@ This repository contains intentional security vulnerabilities for testing and ed
 |-------------------|-------|
 | SQL Injection | `sql.php`, `src/login.js` |
 | Code Injection | `src/GR0008.js` |
-| Command Injection | `src/GR0009.js` |
+| Command Injection | `src/GR0009.js` |szxsadasdasd
 | XSS | `src/GR0003.js`, `src/GR0004.js` |
 | ReDoS | `src/GR0001.js`, `src/GR0002.js` |
 | Hardcoded Secrets | `secrets.js`, `src/GR0008.js` |
