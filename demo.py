@@ -6,11 +6,9 @@ from database.users import User
 
 @app.route("hello")
 def hello():
-    id = request.args.get("id")
-    stmt = text(
-        "SELECT * FROM users where id=%s" % id
-    )  # Query is constructed based on user inputs
-    query = SQLAlchemy().session.query(User).from_statement(stmt)  # Noncompliant
+    user_id = request.args.get("id")
+    stmt = text("SELECT * FROM users where id=:id")
+    query = SQLAlchemy().session.query(User).from_statement(stmt).params(id=user_id)
     user = query.one()
     return "Hello %s" % user.username
 
@@ -20,39 +18,34 @@ from django.db import connection
 
 
 def hello(request):
-    id = request.GET.get("id", "")
+    user_id = request.GET.get("id", "")
     cursor = connection.cursor()
     cursor.execute(
-        "SELECT username FROM auth_user WHERE id=%s" % id
-    )  # Noncompliant; Query is constructed based on user inputs
+        "SELECT username FROM auth_user WHERE id=%s",
+        [user_id],
+    )
     row = cursor.fetchone()
     return HttpResponse("Hello %s" % row[0])
 
 
-import pickle
+import json
 import yaml
 
 
 @app.route("/pickle")
 def pickle_loads():
-    file = request.files["pickle"]
-    pickle.load(
-        file
-    )  # Noncompliant; Never use pickle module to deserialize user inputs
+    file = request.files["json"]
+    return json.load(file.stream)
 
 
 @app.route("/yaml")
 def yaml_load():
     data = request.GET.get("data")
-    yaml.load(
-        data, Loader=yaml.Loader
-    )  # Noncompliant; Avoid using yaml.load with unsafe yaml.Loader
+    return yaml.safe_load(data)
 
 
 @app.route("/yaml_safe")
 def yaml_load_safe():
     data = request.GET.get("data")
     data = "not_malicious"
-    yaml.load(
-        data, Loader=yaml.Loader
-    )  # Noncompliant; Avoid using yaml.load with unsafe yaml.Loader
+    return yaml.safe_load(data)
