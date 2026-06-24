@@ -6,4 +6,6 @@ $query = "SELECT id, name, inserted, size FROM products
 WHERE size = '$offset'";
 $result = odbc_exec($conn, $query);
 $query_opengrep = "UPDATE accounttable SET pwd='$pwd' WHERE uid='$uid' LIMIT 20 OFFSET $offset;";
+// That's it, just a comment
 $result = odbc_exec($conn, $query_opengrep);
+
